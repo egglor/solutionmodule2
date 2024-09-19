@@ -1,0 +1,78 @@
+/* General CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    padding: 10px;
+    background-color: #f4f4f4;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Section Styles */
+.box {
+    background-color: #e0e0e0;
+    border: 1px solid black;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-top: 50px; /* Space for the title */
+}
+
+/* Section Title */
+.section-title {
+    background-color: #333;
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    font-size: 1.25em;
+    border: 1px solid black;
+}
+
+/* Responsive Layout */
+@media (min-width: 992px) {
+    /* Desktop view: sections in a single row */
+    main {
+        display: flex;
+        justify-content: space-between;
+    }
+    .box {
+        width: 32%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Tablet view: two sections on the first row, one on the second row */
+    main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .box {
+        width: 48%;
+        margin-right: 2%;
+        margin-bottom: 20px;
+    }
+    #sushi {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    /* Mobile view: each section takes up the full width */
+    .box {
+        width: 100%;
+    }
+}
